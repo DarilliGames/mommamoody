@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        Name: <input type="text" name="name" id="name"/>
+        Cook Time: <input type="text" name="cooktime" id="cooktime"/>
+    <legend for="ingredients">Ingredients</legend>
+    <div class="input-field col s12" id="ingredientsform">
+    <div id="ingredientarea">
+    <textarea id="ingredients" name="ingredients" autocomplete="off" minlength="5" maxlength="500" placeholder="Example: Milk, Eggs, Chocolat" required></textarea>
+    <textarea id="ingredients" name="ingredients" autocomplete="off" minlength="5" maxlength="500" placeholder="Example: Milk, Eggs, Chocolat" required></textarea>
+    
+    </div>
+    <input type="submit" value="submit">
+    </form>
+    
+    <button onclick="addIngredient()" action="none">Click Here</button>
+    
+<script>
+function addIngredient(){
+var node = document.createElement("LI");                 // Create a <li> node
+var textnode = document.createTextNode("Water");         // Create a text node
+node.appendChild(textnode);                              // Append the text to <li>
+document.getElementById("myList").appendChild(node);
+}    
+</script>
+
+</body>
+</html>
